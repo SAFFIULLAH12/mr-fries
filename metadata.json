@@ -1,0 +1,10 @@
+{
+  "name": "Mr. Fries - Fast Food & 1-Meter Pizza (Dera Ismail Khan)",
+  "description": "Official website for Mr. Fries in Dera Ismail Khan. Famous for Zinger Burgers, Loaded Fries, 1-Meter Pizza, Special Deals, and instant delivery.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
