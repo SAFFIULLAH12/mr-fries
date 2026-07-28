@@ -126,7 +126,7 @@ export default function App() {
   const cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-red-500 selection:text-white relative overflow-x-hidden">
+    <div className="min-h-screen w-full max-w-full bg-black text-white font-sans selection:bg-red-500 selection:text-white relative overflow-x-hidden">
       {/* Canvas Particle Ambient Background */}
       <AmbientEffects />
 
@@ -150,7 +150,7 @@ export default function App() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed top-20 right-6 z-40 bg-black/90 border border-amber-500/50 p-3 rounded-2xl shadow-2xl flex items-center gap-3 text-xs backdrop-blur-xl cursor-pointer hover:border-amber-400"
+          className="fixed top-20 right-6 z-40 bg-black/90 border border-amber-500/50 p-3 rounded-2xl shadow-2xl flex items-center gap-3 text-xs backdrop-blur-xl cursor-pointer hover:border-amber-400 max-w-[calc(100vw-2rem)]"
           onClick={() => setIsCheckoutOpen(true)}
         >
           <div className="w-3 h-3 rounded-full bg-amber-400 animate-ping" />
@@ -175,7 +175,7 @@ export default function App() {
       />
 
       {/* Main Page Sections */}
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden relative z-10">
         <HeroSection onAddToCart={handleAddToCart} />
         <MenuCardsViewer />
         <FeaturedFoods

@@ -119,8 +119,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onAddToCart }) => {
           
           {/* Left Headline Column */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="lg:col-span-5 flex flex-col items-start text-left gap-6"
           >
@@ -182,10 +182,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onAddToCart }) => {
 
           {/* Right Column: Floating Burger Showcase with Labeled Ingredients */}
           <motion.div
-            initial={{ opacity: 0, x: 100, scale: 0.9 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 1.0, delay: 0.2, type: 'spring', damping: 20 }}
-            className="lg:col-span-7 w-full flex flex-col items-center justify-center relative min-h-[480px]"
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="lg:col-span-7 w-full flex flex-col items-center justify-center relative min-h-[440px] sm:min-h-[480px] overflow-hidden sm:overflow-visible px-1"
           >
             {/* Top Floating Control Bar */}
             <div className="flex items-center gap-3 mb-4 z-30">
@@ -203,16 +203,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onAddToCart }) => {
             </div>
 
             {/* Central Pure Floating Burger & Labeled Ingredients Stage */}
-            <div className="relative w-full h-[420px] sm:h-[460px] flex items-center justify-center">
+            <div className="relative w-full h-[380px] sm:h-[460px] flex items-center justify-center">
               
               {/* Background Ambient Glow Halo behind the burger */}
-              <div className="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-r from-red-600/30 via-orange-500/20 to-amber-500/10 blur-3xl pointer-events-none animate-pulse" />
+              <div className="absolute w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-gradient-to-r from-red-600/30 via-orange-500/20 to-amber-500/10 blur-3xl pointer-events-none animate-pulse" />
 
               {/* Seamless Floating Burger Main Image */}
               <motion.div
                 animate={{
-                  y: isExploded ? [0, -10, 0] : [0, -6, 0],
-                  scale: isExploded ? 0.95 : 1.08,
+                  y: isExploded ? [0, -8, 0] : [0, -5, 0],
+                  scale: isExploded ? 0.9 : 1.05,
                   rotate: isExploded ? [0, 1, 0, -1, 0] : 0
                 }}
                 transition={{
@@ -220,7 +220,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onAddToCart }) => {
                   rotate: { duration: 6, repeat: Infinity, ease: 'easeInOut' },
                   scale: { duration: 0.5 }
                 }}
-                className="relative z-20 w-72 sm:w-96 h-72 sm:h-96 rounded-full overflow-hidden shadow-[0_20px_60px_rgba(255,78,0,0.35)] group cursor-pointer border-2 border-red-500/30"
+                className="relative z-20 w-60 h-60 sm:w-96 sm:h-96 rounded-full overflow-hidden shadow-[0_20px_60px_rgba(255,78,0,0.35)] group cursor-pointer border-2 border-red-500/30"
                 onClick={() => setIsExploded(!isExploded)}
               >
                 <img
@@ -245,57 +245,57 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onAddToCart }) => {
                     return (
                       <motion.div
                         key={ing.id}
-                        initial={{ opacity: 0, scale: 0.4, x: isLeft ? 50 : -50 }}
+                        initial={{ opacity: 0, scale: 0.4 }}
                         animate={{
                           opacity: 1,
-                          scale: isSelected ? 1.1 : 1,
+                          scale: isSelected ? 1.05 : 1,
                           x: 0,
-                          y: ing.yOffset
+                          y: ing.yOffset * 0.85
                         }}
-                        exit={{ opacity: 0, scale: 0.4, x: isLeft ? 50 : -50 }}
+                        exit={{ opacity: 0, scale: 0.4 }}
                         transition={{
                           type: 'spring',
                           stiffness: 150,
                           damping: 18,
-                          delay: idx * 0.08
+                          delay: idx * 0.06
                         }}
                         onMouseEnter={() => setActiveIngredient(ing)}
                         onMouseLeave={() => setActiveIngredient(null)}
-                        className={`absolute z-30 flex items-center gap-2 cursor-pointer ${
+                        className={`absolute z-30 flex items-center gap-1 sm:gap-2 cursor-pointer ${
                           isLeft
-                            ? 'right-[54%] sm:right-[56%] flex-row-reverse text-right'
-                            : 'left-[54%] sm:left-[56%] flex-row text-left'
+                            ? 'right-[50%] sm:right-[56%] flex-row-reverse text-right'
+                            : 'left-[50%] sm:left-[56%] flex-row text-left'
                         }`}
                       >
                         {/* Glowing Connector Node */}
                         <div
-                          className="w-3.5 h-3.5 rounded-full border-2 border-white shadow-[0_0_12px_rgba(255,255,255,0.8)] animate-pulse"
+                          className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 rounded-full border-2 border-white shadow-[0_0_12px_rgba(255,255,255,0.8)] animate-pulse shrink-0"
                           style={{ backgroundColor: ing.color }}
                         />
 
                         {/* Dashed / Solid Connector Line */}
                         <div
-                          className="w-8 sm:w-12 h-[2px] bg-gradient-to-r from-red-500 to-amber-400"
+                          className="w-3 sm:w-12 h-[2px] bg-gradient-to-r from-red-500 to-amber-400 shrink-0"
                           style={{ backgroundColor: ing.color }}
                         />
 
                         {/* Floating Labeled Ingredient Badge Tag */}
                         <div
-                          className={`p-2.5 sm:p-3 rounded-2xl border backdrop-blur-2xl transition-all shadow-2xl max-w-[160px] sm:max-w-[200px] ${
+                          className={`p-1.5 sm:p-3 rounded-xl sm:rounded-2xl border backdrop-blur-2xl transition-all shadow-2xl max-w-[125px] sm:max-w-[200px] ${
                             isSelected
                               ? 'bg-red-950/95 border-red-400 text-white shadow-red-500/60 scale-105 ring-2 ring-red-400'
                               : 'bg-black/90 border-white/20 text-gray-200 hover:border-white/50 hover:bg-black'
                           }`}
                         >
-                          <div className="flex items-center gap-1.5 font-black text-xs sm:text-sm text-white">
-                            <span className="text-base">{ing.icon}</span>
+                          <div className="flex items-center gap-1 font-black text-[10px] sm:text-sm text-white">
+                            <span className="text-xs sm:text-base">{ing.icon}</span>
                             <span className="truncate">{ing.name}</span>
                           </div>
-                          <p className="text-[10px] sm:text-[11px] text-gray-300 mt-0.5 line-clamp-1 leading-tight">
+                          <p className="hidden sm:block text-[10px] sm:text-[11px] text-gray-300 mt-0.5 line-clamp-1 leading-tight">
                             {ing.description}
                           </p>
-                          <div className="mt-1 flex items-center gap-1 text-[9px] font-extrabold text-amber-400">
-                            <Flame className="w-2.5 h-2.5 text-orange-500" />
+                          <div className="mt-0.5 sm:mt-1 flex items-center gap-1 text-[8px] sm:text-[9px] font-extrabold text-amber-400">
+                            <Flame className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-orange-500" />
                             <span>{ing.calories} kcal</span>
                           </div>
                         </div>
