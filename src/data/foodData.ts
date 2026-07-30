@@ -168,7 +168,7 @@ export const FOOD_MENU: FoodItem[] = [
     rating: 5.0,
     reviewsCount: 820,
     description: 'Crispy skin-on fries piled high with diced zinger chicken pieces, liquid cheddar cheese lava, jalapeños & house dip.',
-    image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRVCmyB1lsa-BPFP9hvMqx_MVa2MXVsdrFzChu3r31mw&s=10',
     isPopular: true,
     isSpicy: true,
     calories: 650,

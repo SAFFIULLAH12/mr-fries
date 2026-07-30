@@ -26,7 +26,7 @@ const INGREDIENTS: IngredientTag[] = [
     calories: 180,
     icon: '🍞',
     color: '#F59E0B',
-    yOffset: -120,
+    yOffset: -170,
     position: 'left'
   },
   {
@@ -36,7 +36,7 @@ const INGREDIENTS: IngredientTag[] = [
     calories: 90,
     icon: '🌶️',
     color: '#EF4444',
-    yOffset: -75,
+    yOffset: -100,
     position: 'right'
   },
   {
@@ -46,7 +46,7 @@ const INGREDIENTS: IngredientTag[] = [
     calories: 25,
     icon: '🥬',
     color: '#10B981',
-    yOffset: -30,
+    yOffset: -10,
     position: 'left'
   },
   {
@@ -56,7 +56,7 @@ const INGREDIENTS: IngredientTag[] = [
     calories: 110,
     icon: '🧀',
     color: '#FBBF24',
-    yOffset: 20,
+    yOffset: 60,
     position: 'right'
   },
   {
@@ -66,7 +66,7 @@ const INGREDIENTS: IngredientTag[] = [
     calories: 410,
     icon: '🍗',
     color: '#F97316',
-    yOffset: 70,
+    yOffset: 150,
     position: 'left'
   },
   {
@@ -76,7 +76,7 @@ const INGREDIENTS: IngredientTag[] = [
     calories: 150,
     icon: '🍔',
     color: '#D97706',
-    yOffset: 120,
+    yOffset: 210,
     position: 'right'
   }
 ];
@@ -185,7 +185,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onAddToCart }) => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-7 w-full flex flex-col items-center justify-center relative min-h-[440px] sm:min-h-[480px] overflow-hidden sm:overflow-visible px-1"
+            className="lg:col-span-7 w-full flex flex-col items-center justify-center relative min-h-[500px] sm:min-h-[560px] overflow-hidden sm:overflow-visible px-1"
           >
             {/* Top Floating Control Bar */}
             <div className="flex items-center gap-3 mb-4 z-30">
@@ -203,7 +203,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onAddToCart }) => {
             </div>
 
             {/* Central Pure Floating Burger & Labeled Ingredients Stage */}
-            <div className="relative w-full h-[380px] sm:h-[460px] flex items-center justify-center">
+            <div className="relative w-full h-[460px] sm:h-[540px] flex items-center justify-center">
               
               {/* Background Ambient Glow Halo behind the burger */}
               <div className="absolute w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-gradient-to-r from-red-600/30 via-orange-500/20 to-amber-500/10 blur-3xl pointer-events-none animate-pulse" />
@@ -250,7 +250,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onAddToCart }) => {
                           opacity: 1,
                           scale: isSelected ? 1.05 : 1,
                           x: 0,
-                          y: ing.yOffset * 0.85
+                          y: ing.yOffset
                         }}
                         exit={{ opacity: 0, scale: 0.4 }}
                         transition={{
