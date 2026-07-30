@@ -18,7 +18,7 @@ export const WhyChooseUs: React.FC = () => {
             Why Foodies Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-400 to-amber-300">Mr. Fries</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base font-light">
-            Bringing culinary mastery and rich flavors to Dera Ismail Khan fast food lovers.
+            Bringing unbeatable taste and rich flavors to Dera Ismail Khan fast food lovers.
           </p>
         </div>
 

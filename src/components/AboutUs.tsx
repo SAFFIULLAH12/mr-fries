@@ -25,21 +25,21 @@ export const AboutUs: React.FC = () => {
           >
             <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
-                alt="FastBite Kitchen"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLQuK68UBTxY_wAjlsBZiDP9RE94tf_f8u2eiWo45fx-S9Q8hKfXPJCME&s=10"
+                alt="Mr. Fries Dera Ismail Khan"
                 referrerPolicy="no-referrer"
                 className="w-full h-80 sm:h-96 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
 
-              {/* Floating Chef Badge */}
+              {/* Floating Branch Badge */}
               <div className="absolute bottom-6 left-6 right-6 bg-black/80 backdrop-blur-xl p-4 rounded-2xl border border-white/10 flex items-center gap-4 shadow-xl">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-red-600 to-orange-500 flex items-center justify-center text-white">
                   <ChefHat className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-extrabold text-white text-sm">Chef Marco Vance</h4>
-                  <p className="text-xs text-gray-400">Head Executive Culinary Director</p>
+                  <h4 className="font-extrabold text-white text-sm">Mr. Fries Branch</h4>
+                  <p className="text-xs text-gray-400">North Circular Road, Dera Ismail Khan</p>
                 </div>
               </div>
             </div>

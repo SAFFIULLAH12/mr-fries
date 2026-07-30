@@ -154,7 +154,7 @@ export const FOOD_MENU: FoodItem[] = [
     rating: 5.0,
     reviewsCount: 612,
     description: 'The iconic 1-Meter Long Giant Pizza! Loaded with 3 choice flavor toppings, rich mozzarella cheese, olives, jalapenos and garlic crust.',
-    image: '/src/assets/images/cheese_pizza_deluxe_1784978058411.jpg',
+    image: 'https://lh3.googleusercontent.com/d/1F7iXhkImazyMUsQ_C1CKPIrCtEf1_bO5',
     isPopular: true,
     calories: 2200,
     prepTime: '20-25 min'
@@ -248,7 +248,7 @@ export const FOOD_MENU: FoodItem[] = [
     rating: 4.8,
     reviewsCount: 340,
     description: 'Classic hot salted potato fries cooked in 100% vegetable oil.',
-    image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=800&q=80',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS09z-PyHjIqxrO0vyuVZOqFtFpGNmGCKweMxZZy1RJuEMGUMIqb2JZnSkP&s=10',
     calories: 380,
     prepTime: '5 min'
   },
@@ -260,7 +260,7 @@ export const FOOD_MENU: FoodItem[] = [
     rating: 5.0,
     reviewsCount: 400,
     description: 'Selection of Pepsi, 7Up, or Mirinda served icy cold.',
-    image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80',
+    image: 'https://lh3.googleusercontent.com/d/16iqZKTyNIB9XbDK_EN8fy8OqXqsqlZHS',
     calories: 180,
     prepTime: '1 min'
   }
@@ -321,7 +321,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'gal-2',
     title: 'Iconic 1-Meter Pizza Specialty',
     category: 'Pizza',
-    imageUrl: '/src/assets/images/cheese_pizza_deluxe_1784978058411.jpg',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1F7iXhkImazyMUsQ_C1CKPIrCtEf1_bO5',
     caption: '1-Meter long giant pizza loaded with mozzarella cheese pull.'
   },
   {
