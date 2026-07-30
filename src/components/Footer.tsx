@@ -94,7 +94,6 @@ export const Footer: React.FC = () => {
               <li><a href="#menu-cards" className="hover:text-orange-400 transition-colors">Menu Cards</a></li>
               <li><a href="#menu" className="hover:text-orange-400 transition-colors">Online Menu</a></li>
               <li><a href="#reviews" className="hover:text-orange-400 transition-colors">Customer Reviews</a></li>
-              <li><a href="#gallery" className="hover:text-orange-400 transition-colors">Photo Gallery</a></li>
             </ul>
           </div>
 

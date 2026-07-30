@@ -31,7 +31,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     { name: 'Menu Cards', href: '#menu-cards' },
     { name: 'Online Menu', href: '#menu' },
     { name: 'Reviews', href: '#reviews' },
-    { name: 'Gallery', href: '#gallery' },
     { name: 'Location', href: '#locations' },
     { name: 'Contact', href: '#contact' }
   ];

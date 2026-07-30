@@ -9,7 +9,6 @@ import { MenuSection } from './components/MenuSection';
 import { ItemCustomizerModal } from './components/ItemCustomizerModal';
 import { AboutUs } from './components/AboutUs';
 import { ReviewsSection } from './components/ReviewsSection';
-import { GallerySection } from './components/GallerySection';
 import { OffersSection } from './components/OffersSection';
 import { DeliveryMap } from './components/DeliveryMap';
 import { ContactSection } from './components/ContactSection';
@@ -190,7 +189,6 @@ export default function App() {
         />
         <AboutUs />
         <ReviewsSection />
-        <GallerySection />
         <OffersSection onApplyPromoCode={handleApplyPromoCode} />
         <DeliveryMap />
         <ContactSection />
